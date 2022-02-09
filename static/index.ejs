@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <style>
+            body {
+                font-family: "Arial", "Times New Roman", "Aharoni";
+                background-image: linear-gradient(to right, red , yellow);
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-6 offset-lg-3">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h2>Welcome</h2>
+                            <a href="/signout" type="button" class="btn btn-outline-danger btn-sm">Sign Out</a>
+                        </div>
+                        <div class="card-body">
+                            <h5>Welcome to the chat room, <%=user.firstname%>,</h5>
+                            <h6>Your display name is: <%=user.username%></h6>
+                            <h6>Please select a room below based on your continent</h6>
+                            <form class="mt-5" method="get" action="/chat_room">
+                            <div class="form-group">
+                            <label for="room">Room</label>
+                            <select class="form-control" name="room" id="room">
+                            <option value="1">North America</option>
+                            <option value="2">South America</option>
+                            <option value="3">Europe</option>
+                            <option value="4">Asia</option>
+                            </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Join Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
